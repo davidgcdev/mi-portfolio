@@ -7,10 +7,10 @@ Este es un portfolio creado en HTML, CSS y Javascript usando metodología BEM y 
 **David Guisado**
 
 * [LinkedIn](https://www.linkedin.com/in/davidgcdev/)
-* [Porfolio web](https:///)
+* [Porfolio web](https:///)](https://davidgcdev.github.io/mi-portfolio/)
 
 ## Ver ejemplo en vivo 
-- [https://.github.io/blackiebooks-rebranding/](https:///)
+- [[https://.github.io/blackiebooks-rebranding/](https://davidgcdev.github.io/mi-portfolio/)]
 
 ## Instalación 
 Este proyecto no necesita de instalación. Simplemente abre la carpeta o haz doble click en el .html
