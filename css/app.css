@@ -24,7 +24,7 @@ body {
 
 @media (pointer: fine) { body { cursor: none; } }
 
-/* Navbar Minimalista */
+/* Navbar */
 .navbar {
     width: 100%;
     max-width: 1200px;
@@ -66,29 +66,55 @@ body {
     flex-direction: column;
     position: relative;
     overflow: hidden;
-    transition: border-color 0.3s, transform 0.3s;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    color: var(--text-primary);
 }
 
 .bento-card:hover { border-color: var(--text-secondary); transform: translateY(-2px); }
 
-/* Card Especificas */
+/* Cards Específicas */
 .hero { grid-column: span 2; grid-row: span 2; justify-content: center; }
 .hero h1 { font-size: clamp(3rem, 5vw, 4.5rem); line-height: 1; letter-spacing: -2px; margin-bottom: 1rem; }
 .hero .tag { display: inline-block; background: rgba(59, 130, 246, 0.2); color: var(--accent); padding: 0.4rem 1rem; border-radius: 2rem; font-weight: 500; margin-bottom: 1.5rem; font-size: 0.9rem; align-self: flex-start; }
 .hero .bio { color: var(--text-secondary); font-size: 1.1rem; line-height: 1.5; max-width: 90%; }
 
 .project { grid-column: span 2; padding: 0; }
-.project img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; transition: opacity 0.3s, transform 0.5s; }
-.project:hover img { opacity: 1; transform: scale(1.05); }
-.project .card-content { position: absolute; bottom: 0; left: 0; width: 100%; padding: 2rem; background: linear-gradient(transparent, rgba(0,0,0,0.9)); }
 .project .badge { font-size: 0.8rem; color: var(--text-secondary); }
+.project h3 { margin-bottom: 0.2rem; }
+
+/* Estilos de Proyectos Abstractos (Sin Imágenes) */
+.bg-spyro {
+    background: linear-gradient(135deg, rgba(111, 0, 155, 0.4) 0%, var(--card-bg) 100%);
+}
+
+.bg-rick {
+    background: linear-gradient(135deg, rgba(46, 139, 87, 0.4) 0%, var(--card-bg) 100%);
+}
+
+.bg-spyro .card-content, 
+.bg-rick .card-content {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.bg-spyro:hover, 
+.bg-rick:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
 
 .stack { grid-column: span 2; justify-content: center; align-items: center; text-align: center; }
 .stack h3 { margin-bottom: 1.5rem; color: var(--text-secondary); }
 .stack-list { display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; }
 .stack-list span { padding: 0.6rem 1.2rem; background: var(--bg); border: 1px solid var(--card-border); border-radius: 0.8rem; font-size: 0.9rem; }
 
-.social { grid-column: span 1; justify-content: center; align-items: center; text-decoration: none; color: var(--text-primary); gap: 1rem; text-align: center; }
+.social { grid-column: span 1; justify-content: center; align-items: center; gap: 1rem; text-align: center; }
 .social span { font-size: 0.9rem; font-weight: 500; }
 .social:hover { background: var(--text-primary); color: var(--bg); }
 
