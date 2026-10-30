@@ -1,25 +1,22 @@
-'use strict'
+'use strict';
 
-$(document).ready(function(){
+document.addEventListener('DOMContentLoaded', () => {
+    // Verificamos si el dispositivo usa ratón (pointer: fine) antes de activar la lógica del cursor
+    if (window.matchMedia('(pointer: fine)').matches) {
+        const cursor = document.getElementById('cursor');
+        let mouseX = 0, mouseY = 0;
 
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            requestAnimationFrame(() => {
+                cursor.style.transform = `translate(calc(${mouseX}px - 50%), calc(${mouseY}px - 50%))`;
+            });
+        });
 
-    $('body').on({ 'mousemove' : function( e ){
-        console.clear()
-        let clientX = e.originalEvent.clientX
-        let clientY = e.originalEvent.clientY
-        $('#cursor').css({
-            'left' : (clientX - 40 ) + 'px',
-            'top' : (clientY - 40 ) + 'px'
-        })
-    }})
-
-    $('.a').on({
-        'mouseover': function(){
-            $('#cursor').addClass('mini')
-        },
-        'mouseout': function(){
-            $('#cursor').removeClass('mini')
-        },
-    })
-
-})
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+            link.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+        });
+    }
+});
