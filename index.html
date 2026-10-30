@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Guisado | Portfolio</title>
+    <title>David Guisado | Software Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/app.css">
     <script defer src="js/app.js"></script>
 </head>
@@ -14,65 +14,60 @@
 
     <div id="cursor"></div>
 
-    <div class="background-blobs">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-    </div>
+    <nav class="navbar">
+        <div class="logo">DG.</div>
+        <a href="mailto:tuemail@ejemplo.com" class="btn-contact">Contactar</a>
+    </nav>
 
-    <header>
-        <div class="logo"><a href="#inicio">DG.</a></div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#works">Trabajos</a></li>
-                <li><a href="#about">Sobre Mí</a></li>
-            </ul>
-        </nav>
-    </header>
+    <main class="bento-grid">
+        <!-- Hero Card -->
+        <article class="bento-card hero">
+            <h1>David<br>Guisado</h1>
+            <p class="tag">Java Developer</p>
+            <p class="bio">Desarrollador de software especializado en POO y Bases de Datos Relacionales. Transformando lógica en soluciones reales.</p>
+        </article>
 
-    <main>
-        <section id="inicio">
-            <h1>David Guisado</h1>
-            <p class="subtitle">Java & Software Developer</p>
-            <div class="btn-group">
-                <a href="https://github.com/davidgcdev" class="btn" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/davidgcdev/" class="btn" target="_blank">LinkedIn</a>
+        <!-- Project 1: Spyro -->
+        <a href="https://github.com/davidgcdev/Spyro-Guia-Interactiva" target="_blank" rel="noopener noreferrer" class="bento-card project p-1">
+            <img src="assets/spyro.jpg" alt="Interfaz de la Guía Interactiva de Spyro" loading="lazy">
+            <div class="card-content">
+                <h3>Spyro: Guía Interactiva</h3>
+                <span class="badge">Frontend / UI ↗</span>
             </div>
-        </section>
+        </a>
 
-        <section id="works">
-            <h2>Trabajos Destacados</h2>
-            <p class="subtitle">Proyectos en POO y Bases de Datos Relacionales</p>
-            <div class="works-grid">
-                <article class="work-card">
-                    <a href="#">
-                        <img src="assets/coming.jpg" alt="Captura de proyecto 1" loading="lazy">
-                        <div class="work-info">
-                            <h3>Nombre del Trabajo</h3>
-                        </div>
-                    </a>
-                </article>
-                <article class="work-card">
-                    <a href="#">
-                        <img src="assets/work.jpg" alt="Captura de proyecto 2" loading="lazy">
-                        <div class="work-info">
-                            <h3>Nombre del Trabajo</h3>
-                        </div>
-                    </a>
-                </article>
+        <!-- Stack / Skills -->
+        <article class="bento-card stack">
+            <h3>Stack Técnico</h3>
+            <div class="stack-list">
+                <span>Java</span>
+                <span>MySQL</span>
+                <span>HTML/CSS</span>
+                <span>Docker</span>
             </div>
-        </section>
+        </article>
 
-        <section id="about" class="about">
-            <h2>Sobre mí</h2>
-            <p>¡Hola! Soy David, un desarrollador de software junior apasionado por la programación y en constante aprendizaje. Mi objetivo es crecer profesionalmente en el campo del desarrollo de software.</p>
-            <p>Recientemente completé mi formación y tengo experiencia práctica en proyectos utilizando tecnologías como Java, HTML, CSS, MySQL y Docker. Adquirí conocimientos sólidos en fundamentos de programación orientada a objetos.</p>
-        </section>
+        <!-- Project 2: Rick & Morty -->
+        <a href="https://github.com/davidgcdev/RickAndMortyApp" target="_blank" rel="noopener noreferrer" class="bento-card project p-2">
+            <img src="assets/rickmorty.jpg" alt="Captura de la App de Rick y Morty" loading="lazy">
+            <div class="card-content">
+                <h3>Rick & Morty App</h3>
+                <span class="badge">Consumo API ↗</span>
+            </div>
+        </a>
+
+        <!-- Social / Github -->
+        <a href="https://github.com/davidgcdev" target="_blank" rel="noopener noreferrer" class="bento-card social github">
+            <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            <span>Explorar GitHub ↗</span>
+        </a>
+
+        <!-- Social / LinkedIn -->
+        <a href="https://www.linkedin.com/in/davidgcdev/" target="_blank" rel="noopener noreferrer" class="bento-card social linkedin">
+            <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            <span>Conectar en LinkedIn ↗</span>
+        </a>
     </main>
-
-    <footer>
-        <p>Hecho con ♥ por David Guisado</p>
-    </footer>
 
 </body>
 </html>
